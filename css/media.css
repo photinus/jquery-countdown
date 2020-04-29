@@ -2,9 +2,12 @@ html, body, .wrapper {
   height: 100%;
   width: 100%;
 }
-  body { background: url(../img/bg-tile.png) repeat; }
+  body { background: background:none transparent;
+    overflow: hidden; }
 
-.wrapper { display: table; }
+.wrapper { display: table; 
+	height: 100px;
+}
 
 .cell {
   display: table-cell;
@@ -15,16 +18,17 @@ html, body, .wrapper {
 }
 
 #holder {
+  
   width: 603px;
-  height: 383px;
+  height: 123px;
   margin: auto;
 }
 
 .cntSeparator { display: none; }
 
 .cntDigit {
-  margin-top: 148px !important;
+  margin-top: 48px !important;
 }
 
-  .cntDigit#cnt_0 { margin-left: 52px; }
+  .cntDigit#cnt_0 { margin-left: 25px; }
   .cntDigit#cnt_2 { margin-left: 7px; }
