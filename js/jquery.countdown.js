@@ -141,7 +141,7 @@ var parseRelativeDate = function(form, options) {
   var m = now.getMonth() + 1;
   var y = now.getFullYear();
   var h = now.getHours(), mm, s;
-  var currentTimeZoneOffsetInHours = now.getTimezoneOffset() / 60;
+  var tzOffset = now.toString().match(/([A-Z]+[\+-][0-9]+)/)[1];
 
   // read in components and render based on format
   var format = options.format;
@@ -167,7 +167,7 @@ var parseRelativeDate = function(form, options) {
       format = format.substr(3);
   }
   // return our constructed date object
-  return new Date([m, d, y].join('/') + ' ' + [h, mm, s].map(pad).join(':') + ' GMT-0' + currentTimeZoneOffsetInHours + '00');
+  return new Date([m, d, y].join('/') + ' ' + [h, mm, s].map(pad).join(':') + ' ' + tzOffset);
 };
 
 
