@@ -1,3 +1,5 @@
+# Updated for use in Home Assistant (through an iFrame)
+
 # jQuery Countdown
 
 jQuery Countdown is a countdown library with an amazing animation. Take a look
